@@ -1,0 +1,44 @@
+body{
+    background-color: silver;
+}
+
+a{
+    text-decoration: none !important;
+    color:#222 !important;
+}
+.nav-menu, .main {
+    border: 2px solid #eee !important;
+    padding: 10px;
+}
+ol li {
+    cursor: pointer;
+}
+
+.card {
+    background-color: silver;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-around;
+}
+
+
+.product {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 20px;
+    align-items: center;
+  }
+  
+  .product-item {
+    width: 250px;
+    border: 2px solid #eee;
+    padding: 20px;
+    margin: 20px;
+    height: 380px;
+  }
+  .product-item img {
+    width: 100%;
+  }
