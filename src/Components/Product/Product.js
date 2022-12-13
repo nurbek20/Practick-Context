@@ -22,8 +22,10 @@ const Product = () => {
   // console.log("data>>", data)
 
   return (
+
     <div>
       <h1>{product} {data.length}</h1>
+      <div className='product'>
       {
         data.map(elem => {
           return (
@@ -40,6 +42,7 @@ const Product = () => {
           )
         })
       }
+      </div>
 
     </div>
   )

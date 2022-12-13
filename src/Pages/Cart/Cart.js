@@ -1,10 +1,14 @@
-import React,{useContext} from 'react'
+import React,{useContext, useState} from 'react'
 import { MyContext } from './../../Context/My-context';
 import CartItem from './../../Components/Cart-item/Cart-item';
+import Order from "./../../Components/Order/Order"
 
 const Cart = () => {
-  const {cart}=useContext(MyContext)
-  console.log("cart>>>", cart)
+  const [modalShow, setModalShow] = useState(false);
+    const { cart } = useContext(MyContext)
+    const onOrder = () => {
+        setModalShow(true)
+    }
   return (
     <div>
       <h1>Cart</h1>
@@ -15,6 +19,9 @@ const Cart = () => {
           })
         }
       </div>
+      <Order show={modalShow}
+                onHide={() => setModalShow(false)} />
+            <button onClick={onOrder}>оформить товар</button>
       
     </div>
   )

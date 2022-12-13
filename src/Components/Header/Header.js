@@ -1,8 +1,10 @@
-import React from 'react'
+import React, {useContext} from 'react'
 import { Navbar, Container, Nav, Form, Button } from 'react-bootstrap'
 import {Link} from "react-router-dom"
+import { MyContext } from '../../Context/My-context';
 
 const Header = () => {
+  const {cart}=useContext(MyContext)
   return (
     <Navbar bg="light " expand="lg">
       <Container fluid>
@@ -15,7 +17,7 @@ const Header = () => {
             navbarScroll
           >
             <Nav.Link href="#action1"><Link to="/">Home</Link></Nav.Link>
-            <Nav.Link href="#action2"><Link to="cart">Cart</Link></Nav.Link>
+            <Nav.Link href="#action2"><Link to="cart">Cart {cart.length}</Link></Nav.Link>
           </Nav>
           <Form className="d-flex">
             <Form.Control
